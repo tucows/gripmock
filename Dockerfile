@@ -1,4 +1,5 @@
-FROM golang:alpine3.17
+ARG  IMAGE_MIRROR=""
+FROM ${IMAGE_MIRROR}golang:alpine3.17
 
 # install tools (bash, git, protobuf, protoc-gen-go, protoc-grn-go-grpc, pkger)
 RUN apk -U --no-cache add bash git protobuf &&\
